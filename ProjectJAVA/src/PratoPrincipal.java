@@ -1,24 +1,13 @@
 
 public class PratoPrincipal extends Prato {
-	private String type;
 	
 	public PratoPrincipal() {
 		
 	}
 	
-	 public PratoPrincipal(String type, String name, String description, double price) {
-	        super(name, description, price);
-	        this.type = type;
+	 public PratoPrincipal(int num, String name, String description, double price) {
+	        super(num, name, description, price);
 	    }
-	 
-
-	    public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
 
 		public double calcPrice() {
 	        return getPrice();

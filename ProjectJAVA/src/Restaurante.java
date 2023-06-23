@@ -10,9 +10,18 @@ public class Restaurante {
     public Restaurante(HashMap<Integer, Mesa> tables) {
         this.tables = tables;
     }
+    
 
-    public void addTable(Mesa table) throws IllegalArgumentException {
-        int num = table.getNum();
+    public HashMap<Integer, Mesa> getTables() {
+		return tables;
+	}
+
+	public void setTables(HashMap<Integer, Mesa> tables) {
+		this.tables = tables;
+	}
+
+	public void addTable(Mesa table) throws IllegalArgumentException {
+        int num = table.getNumTable();
         if (tables.containsKey(num)) {
             throw new IllegalArgumentException("Mesa já existe");
         } else {
@@ -51,11 +60,11 @@ public class Restaurante {
         System.out.println("- Menu item 1: Macarrão ao molho branco com brocolis e bacon - Preço: R$28.00");
         System.out.println("- Menu item 2: Arroz com carne e legumes - Preço: R$35.00");
         System.out.println("Sobremesas:");
-        System.out.println("- Sobremesa 1: Sorvete sabores (Morango e chocolate) - Preço: R$9.00");
-        System.out.println("- Sobremesa 2: Pudin sabores (Tradicional e chocolate) - Preço: R$12.00");
+        System.out.println("- Menu item 3: Sorvete sabores (Morango e chocolate) - Preço: R$9.00");
+        System.out.println("- Menu item 4: Pudin sabores (Tradicional e chocolate) - Preço: R$12.00");
         System.out.println("Bebidas:");
-        System.out.println("- Bebida 1: Vinho tipos (Suave e seco) - Preço: R$3.00");
-        System.out.println("- Bebida 2: Refrigerantes (Coca cola, Guaraná, Fanta Laranja) - Preço: R$7.00");
+        System.out.println("- Menu item 5: Vinho tipos (Suave e seco) - Preço: R$30.00");
+        System.out.println("- Menu item 6: Refrigerantes (Coca cola, Guaraná, Fanta Laranja) - Preço: R$7.00");
         System.out.println("-----------------------------------------------------------------------------");
     }
 }

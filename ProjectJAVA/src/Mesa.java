@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Mesa {
-	private int num;
+	private int numTable;
     private int capacity;
     private List<Prato> orders;
     
@@ -10,18 +10,18 @@ public class Mesa {
     	
     }
 
-    public Mesa(int num, int capacity) {
-        this.num = num;
+    public Mesa(int numTable, int capacity) {
+        this.numTable = numTable;
         this.capacity = capacity;
         this.orders = new ArrayList<>();
     }
 
-    public int getNum() {
-		return num;
+    public int getNumTable() {
+		return numTable;
 	}
 
-	public void setNum(int num) {
-		this.num = num;
+	public void setNumTable(int numTable) {
+		this.numTable = numTable;
 	}
 
 	public int getCapacity() {

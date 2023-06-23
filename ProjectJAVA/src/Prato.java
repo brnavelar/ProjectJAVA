@@ -1,17 +1,28 @@
 
 public abstract class Prato {
-	private String name;
-	private String description;
-	private double price;
+	public int num;
+	public String name;
+	public String description;
+	public double price;
 	
 	public Prato() {
 		
 	}
 	
-	public Prato(String name, String description, double price) {
+	public Prato(int num, String name, String description, double price) {
+		this.num = num;
 		this.name = name;
 		this.description = description;
 		this.price = price;
+	}
+	
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
 	}
 
 	public String getName() {
@@ -39,6 +50,5 @@ public abstract class Prato {
 	}
 	
 	public abstract double calcPrice();
-	
 	
 }
